@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription
+{% endblock %}
+
+{% block body %}
+	<div class="auth-container">
+		<div class="card auth-card shadow-sm">
+			<div class="card-header text-center bg-white">
+				<h2>
+					<i class="fas fa-user-plus me-2"></i>Créer un compte</h2>
+			</div>
+
+			<div class="card-body">
+				{{ form_start(registrationForm, {'attr': {'novalidate': 'novalidate'}}) }}
+
+				{# Display global errors (e.g., duplicate email) #}
+				{% if registrationForm.vars.errors|length > 0 %}
+					<div class="alert alert-danger">
+						{% for error in registrationForm.vars.errors %}
+							<p class="mb-0">{{ error.message }}</p>
+						{% endfor %}
+					</div>
+				{% endif %}
+
+				<div class="form-group input-icon mb-3">
+					<i class="fas fa-envelope"></i>
+					{{ form_widget(registrationForm.email, {
+						'attr': {
+							'class': 'form-control',
+							'placeholder': 'Adresse email'
+						}
+					}) }}
+					{{ form_errors(registrationForm.email) }}
+				</div>
+
+				<div class="form-group input-icon mb-3">
+					<i class="fas fa-phone"></i>
+					{{ form_widget(registrationForm.phone_number, {
+						'attr': {
+							'class': 'form-control',
+							'placeholder': '+331234567890'
+						}
+					}) }}
+					{{ form_errors(registrationForm.phone_number) }}
+				</div>
+
+				<div class="form-group input-icon mb-3">
+					<i class="fas fa-lock"></i>
+					{{ form_widget(registrationForm.plainPassword.first, {
+						'attr': {
+							'class': 'form-control',
+							'placeholder': 'Mot de passe'
+						}
+					}) }}
+					{{ form_errors(registrationForm.plainPassword.first) }}
+				</div>
+
+				<div class="form-group input-icon mb-4">
+					<i class="fas fa-lock"></i>
+					{{ form_widget(registrationForm.plainPassword.second, {
+						'attr': {
+							'class': 'form-control',
+							'placeholder': 'Répéter le mot de passe'
+						}
+					}) }}
+					{{ form_errors(registrationForm.plainPassword.second) }}
+				</div>
+
+				<button type="submit" class="btn btn-primary btn-block">S'inscrire</button>
+
+				{{ form_end(registrationForm) }}
+			</div>
+		</div>
+	</div>
+{% endblock %}

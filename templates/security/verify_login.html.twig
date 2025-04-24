@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Vérification OTP
+{% endblock %}
+
+{% block body %}
+	<div class="auth-container">
+		<div class="card auth-card shadow-sm">
+			<div class="card-header text-center bg-white">
+				<h2>
+					<i class="fas fa-mobile-alt me-2"></i>Vérification OTP</h2>
+			</div>
+			<div class="card-body text-center">
+				<p>Un code a été envoyé à votre numéro WhatsApp.</p>
+				<form method="post" class="d-inline-block w-100" novalidate>
+					<div class="form-group input-icon mb-4">
+						<i class="fas fa-key"></i>
+						<input type="text" id="otp" name="otp" class="form-control text-center" placeholder="000000" maxlength="6" required>
+					</div>
+					<button type="submit" class="btn btn-success btn-block">Vérifier</button>
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock %}

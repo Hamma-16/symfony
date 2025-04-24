@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion
+{% endblock %}
+
+{% block body %}
+	<div class="auth-container">
+		<div class="card auth-card shadow-sm">
+			<div class="card-header text-center bg-white">
+				<h2>
+					<i class="fas fa-sign-in-alt me-2"></i>Connexion</h2>
+			</div>
+			<div class="card-body">
+				{% if error %}
+					<div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+				{% endif %}
+
+				<form method="post" novalidate>
+					<div class="form-group input-icon mb-3">
+						<i class="fas fa-envelope"></i>
+						<input type="email" name="email" value="{{ last_username }}" class="form-control" placeholder="Adresse email" autocomplete="email" required autofocus>
+					</div>
+
+					<div class="form-group input-icon mb-4">
+						<i class="fas fa-lock"></i>
+						<input type="password" name="password" class="form-control" placeholder="Mot de passe" autocomplete="current-password" required>
+					</div>
+
+					<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+					<button class="btn btn-primary btn-block" type="submit">Se connecter</button>
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock %}
