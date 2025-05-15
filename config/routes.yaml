@@ -1,11 +1,16 @@
+# config/routes.yaml
+
 controllers:
     resource:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+# Security routes
 app_login:
     path: /login
     controller: App\Controller\SecurityController::login
+
 app_verify_login:
     path: /verify-login
     controller: App\Controller\SecurityController::verifyLogin
@@ -13,3 +18,8 @@ app_verify_login:
 app_verify_register:
     path: /verify-register
     controller: App\Controller\RegistrationController::verifyRegister
+
+# Add this if you want a custom home route
+home:
+    path: /
+    controller: App\Controller\HomeController::index

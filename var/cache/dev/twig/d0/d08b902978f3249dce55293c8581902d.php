@@ -441,6 +441,6 @@ class __TwigTemplate_b606ae3d0038c7d3553c82a457420d6a extends Template
 \t\t\t{% block javascripts %}{% endblock %}
 \t\t</body>
 \t</html>
-", "base.html.twig", "C:\\Users\\medsa\\Desktop\\Hamma\\FIGL2\\Semestre 2\\SymfonyProject\\ecommerce\\templates\\base.html.twig");
+", "base.html.twig", "D:\\symfony\\templates\\base.html.twig");
     }
 }

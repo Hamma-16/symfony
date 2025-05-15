@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Order #{{ order.id }}{% endblock %}
+
+{% block body %}
+    <h1>Order #{{ order.id }}</h1>
+    <p><strong>Date:</strong> {{ order.createdAt|date('Y-m-d H:i') }}</p>
+    <p><strong>Status:</strong> {{ order.status }}</p>
+    <p><strong>Total:</strong> {{ order.total }} €</p>
+
+    <h2>Items</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in order.items %}
+                <tr>
+                    <td>{{ item.productName }}</td>
+                    <td>{{ item.quantity }}</td>
+                    <td>{{ item.unitPrice }} €</td>
+                    <td>{{ item.total }} €</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <form action="{{ path('app_order_cancel', {id: order.id}) }}" method="POST" onsubmit="return confirm('Are you sure you want to cancel this order?');" style="margin-top: 20px;">
+        <button type="submit" class="btn btn-warning" {% if order.status == 'cancelled' %}disabled{% endif %}>
+            {% if order.status == 'cancelled' %}
+                Order Cancelled
+            {% else %}
+                Cancel Order
+            {% endif %}
+        </button>
+    </form>
+
+    <a href="{{ path('app_order_index') }}" style="display: inline-block; margin-top: 15px;">Back to orders</a>
+{% endblock %}

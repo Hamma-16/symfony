@@ -170,6 +170,6 @@ class __TwigTemplate_18d0e8db07d098837afe5d333b0c1d03 extends Template
     </ul>
 </div>
 {% endblock %}
-", "admin/dashboard/index.html.twig", "C:\\Users\\medsa\\Desktop\\Hamma\\FIGL2\\Semestre 2\\SymfonyProject\\ecommerce\\templates\\admin\\dashboard\\index.html.twig");
+", "admin/dashboard/index.html.twig", "D:\\symfony\\templates\\admin\\dashboard\\index.html.twig");
     }
 }

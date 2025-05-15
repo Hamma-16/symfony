@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -46,9 +48,16 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[Assert\Length(min: 6)]
     private ?string $plainPassword = null;
 
+    /**
+     * @var Collection<int, Cart>
+     */
+    #[ORM\OneToMany(targetEntity: Cart::class, mappedBy: 'user')]
+    private Collection $createdAt;
+
     public function __construct()
     {
         $this->roles = ['ROLE_USER']; // Default role for all users
+        $this->createdAt = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -168,5 +177,35 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->email = $data['email'];
         $this->password = $data['password'];
         $this->roles = $data['roles'];
+    }
+
+    /**
+     * @return Collection<int, Cart>
+     */
+    public function getCreatedAt(): Collection
+    {
+        return $this->createdAt;
+    }
+
+    public function addCreatedAt(Cart $createdAt): static
+    {
+        if (!$this->createdAt->contains($createdAt)) {
+            $this->createdAt->add($createdAt);
+            $createdAt->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCreatedAt(Cart $createdAt): static
+    {
+        if ($this->createdAt->removeElement($createdAt)) {
+            // set the owning side to null (unless already changed)
+            if ($createdAt->getUser() === $this) {
+                $createdAt->setUser(null);
+            }
+        }
+
+        return $this;
     }
 }
