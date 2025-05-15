@@ -4000,6 +4000,6 @@ body.width-full .container {
     body.width-full .container { margin: 0 30px; }
 }
 
-", "@WebProfiler/Profiler/profiler.css.twig", "C:\\Users\\medsa\\Desktop\\Hamma\\FIGL2\\Semestre 2\\SymfonyProject\\ecommerce\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\profiler.css.twig");
+", "@WebProfiler/Profiler/profiler.css.twig", "D:\\symfony\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\profiler.css.twig");
     }
 }

@@ -1003,6 +1003,6 @@ class __TwigTemplate_ac1799a90705c077ae1998c5acec56ac extends Template
         {% endautoescape %}</script>
     </div>
 {% endmacro %}
-", "@WebProfiler/Collector/time.html.twig", "C:\\Users\\medsa\\Desktop\\Hamma\\FIGL2\\Semestre 2\\SymfonyProject\\ecommerce\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\time.html.twig");
+", "@WebProfiler/Collector/time.html.twig", "D:\\symfony\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\time.html.twig");
     }
 }

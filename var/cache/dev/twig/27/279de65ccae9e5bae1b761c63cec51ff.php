@@ -310,6 +310,6 @@ class __TwigTemplate_6e9803e8eadaf0d2b9ad12068a5d495e extends Template
 \t\t</div>
 \t</div>
 {% endblock %}
-", "registration/register.html.twig", "C:\\Users\\medsa\\Desktop\\Hamma\\FIGL2\\Semestre 2\\SymfonyProject\\ecommerce\\templates\\registration\\register.html.twig");
+", "registration/register.html.twig", "D:\\symfony\\templates\\registration\\register.html.twig");
     }
 }

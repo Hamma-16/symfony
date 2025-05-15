@@ -6,8 +6,9 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'phpDocumentor\\Reflection\\' => array($vendorDir . '/phpdocumentor/reflection-common/src', $vendorDir . '/phpdocumentor/reflection-docblock/src', $vendorDir . '/phpdocumentor/type-resolver/src'),
+    'phpDocumentor\\Reflection\\' => array($vendorDir . '/phpdocumentor/reflection-docblock/src', $vendorDir . '/phpdocumentor/type-resolver/src', $vendorDir . '/phpdocumentor/reflection-common/src'),
     'Webmozart\\Assert\\' => array($vendorDir . '/webmozart/assert/src'),
+    'Vich\\UploaderBundle\\' => array($vendorDir . '/vich/uploader-bundle/src'),
     'Twilio\\' => array($vendorDir . '/twilio/sdk/src/Twilio'),
     'Twig\\Extra\\TwigExtraBundle\\' => array($vendorDir . '/twig/extra-bundle'),
     'Twig\\' => array($vendorDir . '/twig/twig/src'),
@@ -93,7 +94,12 @@ return array(
     'PhpParser\\' => array($vendorDir . '/nikic/php-parser/lib/PhpParser'),
     'PHPStan\\PhpDocParser\\' => array($vendorDir . '/phpstan/phpdoc-parser/src'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
+    'Metadata\\' => array($vendorDir . '/jms/metadata/src'),
     'Masterminds\\' => array($vendorDir . '/masterminds/html5/src'),
+    'Liip\\ImagineBundle\\' => array($vendorDir . '/liip/imagine-bundle'),
+    'Knp\\Component\\' => array($vendorDir . '/knplabs/knp-components/src/Knp/Component'),
+    'Knp\\Bundle\\PaginatorBundle\\' => array($vendorDir . '/knplabs/knp-paginator-bundle/src'),
+    'Imagine\\' => array($vendorDir . '/imagine/imagine/src'),
     'Egulias\\EmailValidator\\' => array($vendorDir . '/egulias/email-validator/src'),
     'Doctrine\\SqlFormatter\\' => array($vendorDir . '/doctrine/sql-formatter/src'),
     'Doctrine\\Persistence\\' => array($vendorDir . '/doctrine/persistence/src/Persistence'),

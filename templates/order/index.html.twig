@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}My Orders{% endblock %}
+
+{% block body %}
+    <h1>My Orders</h1>
+
+    {% if orders is empty %}
+        <p>You have no orders yet.</p>
+    {% else %}
+        <ul>
+            {% for order in orders %}
+                <li>
+                    <a href="{{ path('app_order_show', {id: order.id}) }}">
+                        Order #{{ order.id }} - {{ order.createdAt|date('Y-m-d H:i') }} - {{ order.total }} €
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <a href="{{ path('app_product_index') }}">Browse Products</a>
+{% endblock %}

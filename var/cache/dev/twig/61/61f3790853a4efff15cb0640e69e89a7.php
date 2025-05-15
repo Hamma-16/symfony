@@ -193,6 +193,6 @@ class __TwigTemplate_99e30a5e40650f68195c7b651c2e4b90 extends Template
 \t\t</div>
 \t</div>
 {% endblock %}
-", "verification/index.html.twig", "C:\\Users\\medsa\\Desktop\\Hamma\\FIGL2\\Semestre 2\\SymfonyProject\\ecommerce\\templates\\verification\\index.html.twig");
+", "verification/index.html.twig", "D:\\symfony\\templates\\verification\\index.html.twig");
     }
 }

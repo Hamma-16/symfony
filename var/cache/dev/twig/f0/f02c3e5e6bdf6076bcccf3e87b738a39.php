@@ -176,6 +176,6 @@ class __TwigTemplate_be0ffc76239628d0a207e95af47b72a7 extends Template
 \t\t{% endif %}
 \t</div>
 {% endblock %}
-", "home/index.html.twig", "C:\\Users\\medsa\\Desktop\\Hamma\\FIGL2\\Semestre 2\\SymfonyProject\\ecommerce\\templates\\home\\index.html.twig");
+", "home/index.html.twig", "D:\\symfony\\templates\\home\\index.html.twig");
     }
 }
